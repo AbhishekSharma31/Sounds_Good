@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://www.androidhive.info/2014/07/android-building-multi-language-supported-app/-->
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="bg_gradient_start">#0431B4</color>
+    <color name="bg_gradient_end">#868A08</color>
+    <color name="bg_button_login">#54871A</color>
+</resources>

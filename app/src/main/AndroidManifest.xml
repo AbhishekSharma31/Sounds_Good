@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.abhishek.com.sounds_good" >
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission android:protectionLevel="signature"
+        android:name="app.abhishek.com.sounds_good.permission.C2D_MESSAGE" />
+    <uses-permission android:name="app.abhishek.com.sounds_good.permission.C2D_MESSAGE" />
+    <application
+        android:name=".ParseConnect"
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@drawable/applogo"
+        android:theme="@style/Theme.Soundsgood" >
+        <activity
+            android:name=".HomepageActivity"
+            android:label="SoundsGood" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login!" >
+        </activity>
+        <activity
+            android:name=".ResetPassword"
+            android:label="Reset Password" >
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Register!" >
+        </activity>
+        <activity
+            android:name=".UpdateStatusActivity"
+            android:label="Update Status" >
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="User" >
+        </activity>
+        <activity
+            android:name=".AudioActivity"
+            android:label="Audio Comments!" >
+
+        </activity>
+        <activity android:name=".AudioFilesList"
+            android:label="Audio Wall"
+            ></activity>
+        <activity
+            android:name=".StatusDetailView"
+            android:label="Status Detail" >
+        </activity>
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!--
+                  IMPORTANT: Change "com.parse.starter" to match your app's package name.
+                -->
+                <category android:name="app.abhishek.com.sounds_good" />
+            </intent-filter>
+        </receiver></application>
+
+</manifest>

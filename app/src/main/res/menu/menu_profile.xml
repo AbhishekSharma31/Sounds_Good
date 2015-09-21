@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/updateStatus"
+        android:title="Update"
+        android:showAsAction="always" />
+    <item android:id="@+id/logoutUser"
+        android:title="Logout"
+        android:showAsAction="never" />
+    <item android:id="@+id/audio"
+        android:title="Audio"
+        android:showAsAction="always" />
+</menu>

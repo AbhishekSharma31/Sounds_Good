@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="app.abhishek.com.sounds_good.UpdateStatusActivity">
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:showAsAction="never" />
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/logoutUser"
+        android:title="Logout"
+        android:showAsAction="never" />
+</menu>
